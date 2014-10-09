@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.noticecity.widgets.KeyboardDetectorScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.noticecity"
+    android:id="@+id/keyboard_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:id="@+id/parent_signin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight=".8"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_2x_small" >
+
+            <com.noticecity.widgets.CustomEditText
+                android:id="@+id/username_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_loginactivity_editext"
+                android:drawableLeft="@drawable/ic_user"
+                android:drawablePadding="@dimen/padding_very_small"
+                android:hint="@string/email_username"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/padding_2x_2_small"
+                android:paddingTop="@dimen/padding_2x_2_small"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_brown"
+                android:textColorHint="@color/app_brown"
+                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/acc_seperator" />
+
+            <com.noticecity.widgets.CustomEditText
+                android:id="@+id/password_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_editext_bottom_round"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="@dimen/padding_very_small"
+                android:hint="@string/password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/padding_2x_2_small"
+                android:paddingTop="@dimen/padding_2x_2_small"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/app_brown"
+                android:textColorHint="@color/app_brown"
+                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/acc_seperator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_2x_small"
+                android:paddingTop="@dimen/padding_2x_small"
+                android:weightSum="1" >
+
+                <CheckBox
+                    android:id="@+id/checkbox_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:button="@android:color/transparent"
+                    android:drawableLeft="@drawable/selector_login_checkbox"
+                    android:drawablePadding="@dimen/padding_very_small"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/padding_login_screen_heading"
+                    android:text="@string/remembered_me"
+                    android:textColor="@color/app_brown" />
+
+                <com.noticecity.widgets.CustomTextView
+                    android:id="@+id/forgot_password_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:gravity="right"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/forgot_password"
+                    app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+            </LinearLayout>
+
+            <com.noticecity.widgets.CustomButton
+                android:id="@+id/signin_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_login_btn"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/padding_small"
+                android:singleLine="true"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+            <com.noticecity.widgets.CustomTextView
+                android:id="@+id/new_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding_login_screen_heading"
+                android:paddingTop="@dimen/padding_login_screen_small"
+                android:text="@string/new_user"
+                android:textColor="@color/createaccount_button"
+                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+            <Button
+                android:id="@+id/createaccount_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shape_createaccount_btn"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/padding_small"
+                android:singleLine="true"
+                android:text="@string/create_account"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.noticecity.widgets.KeyboardDetectorScrollView>

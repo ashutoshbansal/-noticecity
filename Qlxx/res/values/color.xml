@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="black_trans">#80ECB206</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent_white">#60FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#2C6C00</color>
+    <color name="app_brown">#774C29</color>
+
+    <!-- Side Menu -->
+    <color name="side_menu_text">#79502E</color>
+
+    <!-- Login Activity -->
+    <color name="white_transparent">#90FFFFFF</color>
+    <color name="login_edittext">#50FFFFFF</color>
+    <color name="login_button">#F7941D</color>
+    <color name="createaccount_button">#774C29</color>
+    <color name="forgot_password">#09BFE6</color>
+
+    <!-- Create Account -->
+    <color name="acc_seperator">#C5A99B</color>
+    <!-- Dashboard Activity -->
+    <color name="dashboard_shop_pink">#df3485</color>
+    <color name="dashboard_deals_green">#4bb253</color>
+    <color name="dashboard_flight_blue">#34a1df</color>
+    <color name="dashboard_flight_dup_blue">#0074AA</color>
+    <color name="dashboard_hotel_purple">#a046bd</color>
+    <color name="dashboard_vouchers_red">#e14154</color>
+    <color name="dashboard_map_orrange">#de762a</color>
+    <color name="dashboard_pricescanner">#403c76</color>
+    <color name="dashboard_coupons">#00a19a</color>
+
+    <!-- Hotels -->
+    <color name="hotels_blue">#0074AA</color>
+
+    <!-- Dails deals Adapter -->
+    <color name="deals_price_green">#3C9442</color>
+    <color name="row_selector_orange">#F59331</color>
+
+    <!-- Main Screen -->
+    <color name="black_header">#132030</color>
+    <color name="txt_header">#539ae3</color>
+    <color name="coupons_text_dark_gray">#6B6B6B</color>
+    <color name="coupons_text_gray">#746B6B</color>
+    <color name="notf_border">#CAC3B4</color>
+    <color name="brown"> #774C29</color>
+    <color name="light_brown">  #C8B6AA</color>
+    <color name="pink">  #D54451</color>
+    <color name="orange"> #D1812A</color>
+
+</resources>

@@ -1,8 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Qlxx</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Notice City</string>
     <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
+    <!-- demo String -->
+    <string name="julia_wilson">Julia Wilson</string>
+    <string name="shopping">Shopping</string>
+    <string name="title_facebook_login">FB Login</string>
+    <string name="applicationId">330827990403582</string>
+
+    <!-- Login Activity -->
+    <string name="email_username">Email/Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="login">LOG IN</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="new_user">New user? Create your Account</string>
+    <string name="remembered_me">Remember me</string>
+
+    <!-- Register Activity -->
+    <string name="invite_code">Invite Code</string>
+    <string name="username">Username</string>
+    <string name="email_address">Email Address</string>
+    <string name="accept_terms">Accept terms and privacy policy</string>
+
+    <!-- Select Country -->
+    <string name="submit">Submit</string>
+
+    <!-- Flight Screen -->
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="depart">Depart</string>
+    <string name="return_txt">Return</string>
+    <string name="select_date">Select Date</string>
+    <string name="search_flight">Search for flights</string>
+    <string name="flights_name">Flights</string>
+
+    <!-- Hotel Screen -->
+    <string name="enter_city_region">Enter city,region or specific hotel</string>
+    <string name="check_in_day">Check-in Day</string>
+    <string name="check_out_day">Check-out Day</string>
+    <string name="specific_dates">I dont have specific dates yet</string>
+    <string name="guests">Guests</string>
+    <string name="search">Search</string>
+
+    <!-- Daily Deals Adapter -->
+    <string name="buy">Buy</string>
+    <string name="available_categories"> Available Categories</string>
+    <string name="select_all"> Select All</string>
+    <string name="discount">Discount</string>
+
+    <!-- Screen Tag -->
+    <string name="daily_deals">Daily Deals</string>
+    <string name="flights">Flights</string>
+    <string name="search_hotels">Search Hotels</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="price_scanner">Price Scanner</string>
+
+    <!-- Shop Fragment -->
+    <string name="select_option">Select Options below</string>
+    <string name="enter_product_name">Enter product name</string>
+
+    <!-- Calendar Fragment -->
+    <string name="departure_date">Select departure date</string>
+    <string name="return_date">Select return date</string>
+
+    <!-- Invite Friend -->
+    <string name="invite_friend_txt">Invite via Text message</string>
+    <string name="invite_facebook_friend_txt">Invite via Facebook</string>
+    <string name="invite_email_friend_txt">Invite via Email</string>
+    <string name="text_msg">Text Message</string>
+    <string name="facebook_txt">Facebook</string>
+    <string name="email_txt">Email</string>
+    <string name="txt_main_screen_no_contacts">No Contacts Found</string>
+    <string name="txt_main_screen_search_hint">Search</string>
+    <string name="coupon_code_">Coupon Code:</string>
+    <string name="title_activity_send_email_activity">SendEmailACtivity</string>
+    <string name="send_message">SEND MESSAGE</string>
+    <string name="message_editing">Message Editing</string>
+    <string name="hey_checkout_this_cool_app_">Hey! Check out this cool new app that will help you save both time and money, its free! </string>
+
+    <!-- Side Menu -->
+    <string name="side_menu_home">HOME</string>
+    <string name="side_menu_shop">SHOP</string>
+    <string name="side_menu_deals">DAILY DEALS</string>
+    <string name="side_menu_flights">FLIGHTS</string>
+    <string name="side_menu_hotels">HOTELS</string>
+    <string name="side_menu_scanner">PRICE SCANNER</string>
+    <string name="side_menu_invite">INVITE FRIEND</string>
+    <string name="side_menu_branding">BRANDING</string>
+    <string name="side_menu_coupons">SPECIAL OFFER</string>
+    <string name="side_menu_notification">NOTIFICATION</string>
+    <string name="side_menu_inbox">INBOX</string>
+    <string name="side_menu_app_coupons">COUPONS</string>
+    <string name="side_menu_select_country">SELECT COUNTRY</string>
+    <string name="side_menu_logout">LOGOUT</string>
+    <string name="title_activity_notification_dialog">NotificationDialogActivity</string>
+    
+    
+    
+    
+    <!-- User interface labels and strings -->
+
+    <!-- Address format -->
+    <string name="address_output_string">%1$s %2$s %3$s</string>
+
+    <!-- Latitude, longitude format -->
+    <string name="latitude_longitude">%1$.8f, %2$.8f</string>
+
+    <!-- Labels -->
+    <string name="latlng">Lat/Long:</string>
+    <string name="address">Address:</string>
+
+    <!-- Messages -->
+    <string name="connected">Client connected</string>
+    <string name="connection_error_code_unknown">Unknown connection error code:  %1$d</string>
+    <string name="connection_failed">Connection failed</string>
+    <string name="disconnected">Client disconnected</string>
+    <string name="get_address">Get Address</string>
+    <string name="get_location">Get Location</string>
+    <string name="illegal_argument_exception">
+        Illegal arguments: Latitude %1$.8f Longitude %2$.8f
+    </string>
+    <string name="invalid_action">Invalid intent action %1$s</string>
+    <string name="invalid_integer_id">Invalid integer request ID: %1$s</string>
+    <string name="IO_Exception_getFromLocation">IO Exception in Geocoder.getFromLocation()</string>
+    <string name="location_requested">Periodic updates requested</string>
+    <string name="location_updated">Location updated</string>
+    <string name="location_update_error">Location update failed</string>
+    <string name="location_update_error_detail">
+        Location update error. code %1$d message %2$s
+    </string>
+    <string name="location_update_missing_update">
+        Location update error. No incoming location.
+    </string>
+    <string name="location_updates_stopped">Periodic updates stopped</string>
+    <string name="log_new_location">New location: %1$s</string>
+    <string name="no_address_found">No address found for location</string>
+    <string name="no_connection">No connection: Cannot request location</string>
+    <string name="no_geocoder_available">Cannot get address. No geocoder available.</string>
+    <string name="no_location_available">Location not available</string>
+    <string name="resolved">Error resolved. Please re-try operation.</string>
+    <string name="no_resolution">Google Play services: unable to resolve connection error.</string>
+    <string name="periodic_update_stop">Stopping periodic updates</string>
+    <string name="play_services_available">Google Play services is available</string>
+    <string name="request_location_updates_in_progress">
+        Can\'t request location updates, previous request hasn\'t finished
+    </string>
+    <string name="start_updates">Start Updates</string>
+    <string name="stop_updates">Stop Updates</string>
+    <string name="unknown">--Unknown--</string>
+    <string name="unknown_activity_request_code">
+        Received an unknown activity request code %1$d in onActivityResult.
+    </string>
+
+    
+    <!-- Product Detail -->
+    <string name="view_detail_page">View Detail Page</string>
+    
+    <string name="txt_depart">Depart : </string>
+    <string name="txt_return">Return : </string>
+    
 </resources>

@@ -8,9 +8,11 @@ import com.noticecity.retrofitcore.RestService;
 import com.noticecity.utils.Constants;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 
 public class MyApplication extends Application {
 	private RestService restService;
+	private SharedPreferences mSharedPreferences;
 
 	@Override
 	public void onCreate() {
@@ -40,6 +42,13 @@ public class MyApplication extends Application {
 				.setRequestInterceptor(requestInterceptor).build();
 		restService = restAdapter.create(RestService.class);
 
+	}
+
+	public SharedPreferences getPreference() {
+		if (mSharedPreferences == null) {
+			mSharedPreferences = getSharedPreferences(Constants.NoticeCityPreference.PREFERENCE_NAME, MODE_PRIVATE);
+		}
+		return mSharedPreferences;
 	}
 
 }
