@@ -28,10 +28,7 @@ public class LoginActivity extends BaseActivity {
 	@Override
 	public <SCREEN_MODE> void onFailure(RetrofitError retrofitError,
 			SCREEN_MODE screenMode) {
-		// TODO Auto-generated method stub
 	
-		
-		
 		
 		
 	}
