@@ -51,7 +51,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/acc_seperator" />
+                android:background="@color/black" />
 
             <com.noticecity.widgets.CustomEditText
                 android:id="@+id/password_id"
@@ -75,7 +75,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/acc_seperator" />
+                android:background="@color/black" />
 
             <LinearLayout
                 android:layout_width="match_parent"

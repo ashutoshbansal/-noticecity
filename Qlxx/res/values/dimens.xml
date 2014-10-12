@@ -35,6 +35,7 @@
     <dimen name="side_left_menu_image">40dp</dimen>
     <dimen name="height_wide_image">200dp</dimen>
 
+    
     <!-- TextView -->
     <dimen name="txt_heading">9sp</dimen>
     <dimen name="txt_heading_1">11sp</dimen>

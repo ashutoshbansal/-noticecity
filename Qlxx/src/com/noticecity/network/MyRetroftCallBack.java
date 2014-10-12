@@ -1,12 +1,12 @@
 package com.noticecity.network;
 
 import retrofit.RetrofitError;
-
+import com.noticecity.utils.Constants.SERVICE_MODE;
 public interface MyRetroftCallBack {
 
-	<T, SCREEN_MODE> void onSuccess(T t, SCREEN_MODE screenMode);
+	 <T> void onSuccess(T t, SERVICE_MODE screenMode);
 
-	<SCREEN_MODE> void onFailure(RetrofitError retrofitError,
-			SCREEN_MODE screenMode);
+	 void onFailure(RetrofitError retrofitError,
+			SERVICE_MODE screenMode);
 
 }

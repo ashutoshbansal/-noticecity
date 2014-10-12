@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_loginactivity_editext"
                 android:drawablePadding="@dimen/padding_very_very_small"
-                android:hint="@string/invite_code"
+                android:hint="@string/Phone_number"
                 android:imeOptions="actionNext"
                 android:inputType="number"
                 android:maxLines="1"
@@ -42,36 +42,14 @@
                 android:paddingTop="@dimen/padding_2x_2_small"
                 android:singleLine="true"
                 android:text=""
-                android:textColor="@color/app_brown"
-                android:textColorHint="@color/app_brown"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/acc_seperator" />
-
-            <com.noticecity.widgets.CustomEditText
-                android:id="@+id/username_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_accountactivity_editext"
-                android:drawablePadding="@dimen/padding_very_very_small"
-                android:hint="@string/username"
-                android:imeOptions="actionNext"
-                android:maxLines="1"
-                android:paddingBottom="@dimen/padding_2x_2_small"
-                android:paddingTop="@dimen/padding_2x_2_small"
-                android:singleLine="true"
-                android:text=""
-                android:textColor="@color/app_brown"
-                android:textColorHint="@color/app_brown"
-                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/acc_seperator" />
+                android:background="@color/black" />
 
             <com.noticecity.widgets.CustomEditText
                 android:id="@+id/email_address_id"
@@ -87,14 +65,14 @@
                 android:paddingTop="@dimen/padding_2x_2_small"
                 android:singleLine="true"
                 android:text=""
-                android:textColor="@color/app_brown"
-                android:textColorHint="@color/app_brown"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/acc_seperator" />
+                android:background="@color/black" />
 
             <com.noticecity.widgets.CustomEditText
                 android:id="@+id/password_id"
@@ -110,10 +88,75 @@
                 android:paddingTop="@dimen/padding_2x_2_small"
                 android:singleLine="true"
                 android:text=""
-                android:textColor="@color/app_brown"
-                android:textColorHint="@color/app_brown"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <com.noticecity.widgets.CustomEditText
+                android:id="@+id/username_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_accountactivity_editext"
+                android:drawablePadding="@dimen/padding_very_very_small"
+                android:hint="@string/username"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/padding_2x_2_small"
+                android:paddingTop="@dimen/padding_2x_2_small"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <com.noticecity.widgets.CustomEditText
+                android:id="@+id/cityname_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_accountactivity_editext"
+                android:drawablePadding="@dimen/padding_very_very_small"
+                android:hint="@string/city"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/padding_2x_2_small"
+                android:paddingTop="@dimen/padding_2x_2_small"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <com.noticecity.widgets.MyDefaultSpinner
+                android:id="@+id/type_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:prompt="@string/s_type" />
+
+            
+
+             <com.noticecity.widgets.MyDefaultSpinner
+                android:id="@+id/mode_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_height"
+                android:prompt="@string/s_mode" />
+
+            
+            
             <CheckBox
                 android:id="@+id/checkbox_id"
                 android:layout_width="match_parent"
@@ -126,7 +169,7 @@
                 android:paddingLeft="@dimen/padding_login_screen_heading"
                 android:paddingTop="@dimen/padding_2x_small"
                 android:text="@string/accept_terms"
-                android:textColor="@color/app_brown" />
+                android:textColor="@color/black" />
 
             <com.noticecity.widgets.CustomButton
                 android:id="@+id/create_account_id"

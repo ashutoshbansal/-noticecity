@@ -29,6 +29,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import retrofit.client.Response;
+import retrofit.mime.TypedByteArray;
+import retrofit.mime.TypedInput;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -69,17 +71,21 @@ import com.google.gson.JsonSyntaxException;
 
 public class Utility {
 	private static final String TAG = Utility.class.getSimpleName();
+	private static final String MIME_TYPE = "application/json; charset=UTF-8";
 
 	public static void hideSoftKeyboard(Activity activity, View myEditText) {
 		if (myEditText != null) {
-			InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-			imm.hideSoftInputFromWindow(myEditText.getApplicationWindowToken(), 0);
+			InputMethodManager imm = (InputMethodManager) activity
+					.getSystemService(Context.INPUT_METHOD_SERVICE);
+			imm.hideSoftInputFromWindow(myEditText.getApplicationWindowToken(),
+					0);
 		}
 	}
 
 	public static void showSoftKeyboard(Activity activity, View myEditText) {
 		if (myEditText != null) {
-			InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+			InputMethodManager imm = (InputMethodManager) activity
+					.getSystemService(Context.INPUT_METHOD_SERVICE);
 			imm.showSoftInput(myEditText, 0);
 		}
 	}
@@ -87,7 +93,8 @@ public class Utility {
 	/**
 	 * Description : Custom Message
 	 */
-	public static boolean isNotEmptyError(Activity activity, EditText editText, String msg) {
+	public static boolean isNotEmptyError(Activity activity, EditText editText,
+			String msg) {
 		if (editText.getText().toString().trim().equalsIgnoreCase("")) {
 			editText.requestFocus();
 			editText.setError(msg);
@@ -97,7 +104,8 @@ public class Utility {
 		}
 	}
 
-	public static boolean isNotEmptyError(Activity activity, EditText editText, String msg, String limitMsg, int minLimit) {
+	public static boolean isNotEmptyError(Activity activity, EditText editText,
+			String msg, String limitMsg, int minLimit) {
 		if (editText.getText().toString().trim().equalsIgnoreCase("")) {
 			editText.requestFocus();
 			editText.setError(msg);
@@ -108,7 +116,8 @@ public class Utility {
 				return true;
 			else {
 				editText.requestFocus();
-				editText.setError(limitMsg + " must be atleast " + minLimit + " character long");
+				editText.setError(limitMsg + " must be atleast " + minLimit
+						+ " character long");
 				return false;
 			}
 		}
@@ -117,7 +126,8 @@ public class Utility {
 	/**
 	 * Description : Custom Message
 	 */
-	public static boolean isNotEmpty(Activity activity, EditText editText, String msg) {
+	public static boolean isNotEmpty(Activity activity, EditText editText,
+			String msg) {
 		if (editText.getText().toString().trim().equalsIgnoreCase("")) {
 			ShowToast(activity, msg);
 			return false;
@@ -126,7 +136,8 @@ public class Utility {
 		}
 	}
 
-	public static boolean isNotEmpty(Activity activity, TextView editText, String msg) {
+	public static boolean isNotEmpty(Activity activity, TextView editText,
+			String msg) {
 		if (editText.getText().toString().trim().equalsIgnoreCase("")) {
 			ShowToast(activity, msg);
 			return false;
@@ -138,8 +149,10 @@ public class Utility {
 	/**
 	 * Description : Default Message
 	 */
-	public static boolean isNotEmptyDefault(Activity activity, EditText editText, String field) {
-		return isNotEmpty(activity, editText, field + " " + Constants.ToastMesaage.FIELD_CANT_BLANK);
+	public static boolean isNotEmptyDefault(Activity activity,
+			EditText editText, String field) {
+		return isNotEmpty(activity, editText, field + " "
+				+ Constants.ToastMesaage.FIELD_CANT_BLANK);
 	}
 
 	public static boolean validateEmail(Activity activity, EditText editText) {
@@ -156,7 +169,8 @@ public class Utility {
 		}
 	}
 
-	public static boolean validateEmailDropBox(Activity activity, EditText editText) {
+	public static boolean validateEmailDropBox(Activity activity,
+			EditText editText) {
 		Pattern pattern;
 		Matcher matcher;
 		String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -171,7 +185,8 @@ public class Utility {
 		}
 	}
 
-	public static boolean validateEmailDropBox(Activity activity, EditText editText, String text) {
+	public static boolean validateEmailDropBox(Activity activity,
+			EditText editText, String text) {
 		Pattern pattern;
 		Matcher matcher;
 		String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -186,7 +201,8 @@ public class Utility {
 		}
 	}
 
-	public static String ByteArrayTobase64(ByteArrayOutputStream byteArrayOutputStream) {
+	public static String ByteArrayTobase64(
+			ByteArrayOutputStream byteArrayOutputStream) {
 		if (byteArrayOutputStream == null) {
 			return "";
 		}
@@ -238,7 +254,8 @@ public class Utility {
 		}
 	}
 
-	public static Bundle insertValueBundleFragment(FragmentActivity activity, String key, Serializable serializable) {
+	public static Bundle insertValueBundleFragment(FragmentActivity activity,
+			String key, Serializable serializable) {
 		Bundle bundle = activity.getIntent().getExtras();
 		if (bundle == null) {
 			bundle = new Bundle();
@@ -247,7 +264,8 @@ public class Utility {
 		return bundle;
 	}
 
-	public static Bundle insertValueInBundle(Bundle bundle, String key, Serializable serializable) {
+	public static Bundle insertValueInBundle(Bundle bundle, String key,
+			Serializable serializable) {
 		if (bundle == null) {
 			bundle = new Bundle();
 		}
@@ -255,7 +273,8 @@ public class Utility {
 		return bundle;
 	}
 
-	public static Serializable getValueBundleFragment(FragmentActivity activity, String key) {
+	public static Serializable getValueBundleFragment(
+			FragmentActivity activity, String key) {
 		Bundle bundle = activity.getIntent().getExtras();
 		if (bundle == null) {
 			bundle = new Bundle();
@@ -264,7 +283,8 @@ public class Utility {
 		return serializable;
 	}
 
-	public static void saveBundleFragment(FragmentActivity activity, Bundle bundle) {
+	public static void saveBundleFragment(FragmentActivity activity,
+			Bundle bundle) {
 		activity.getIntent().putExtras(bundle);
 	}
 
@@ -362,7 +382,8 @@ public class Utility {
 		try {
 			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			JsonParser jp = new JsonParser();
-			JsonElement je = jp.parse(convertStreamToString(response.getBody().in()));
+			JsonElement je = jp.parse(convertStreamToString(response.getBody()
+					.in()));
 			return gson.toJson(je);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -399,8 +420,10 @@ public class Utility {
 
 	@SuppressWarnings("deprecation")
 	public static int[] getScreenDimension(Activity activity) {
-		int height = activity.getWindow().getWindowManager().getDefaultDisplay().getHeight();
-		int width = activity.getWindow().getWindowManager().getDefaultDisplay().getWidth();
+		int height = activity.getWindow().getWindowManager()
+				.getDefaultDisplay().getHeight();
+		int width = activity.getWindow().getWindowManager().getDefaultDisplay()
+				.getWidth();
 		return new int[] { width, height };
 	}
 
@@ -418,7 +441,8 @@ public class Utility {
 	public static String getDateInFormat(long mills, String pattern) {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 		Date date = new Date(mills);
-		simpleDateFormat.setTimeZone(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
+		simpleDateFormat.setTimeZone(new SimpleTimeZone(
+				SimpleTimeZone.UTC_TIME, "UTC"));
 		String format = simpleDateFormat.format(date);
 		return format;
 
@@ -439,7 +463,8 @@ public class Utility {
 			DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 			Date date = formatter.parse(dateStr);
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
-			simpleDateFormat.setTimeZone(new SimpleTimeZone(SimpleTimeZone.UTC_TIME, "UTC"));
+			simpleDateFormat.setTimeZone(new SimpleTimeZone(
+					SimpleTimeZone.UTC_TIME, "UTC"));
 			String format = simpleDateFormat.format(date);
 			return format;
 		} catch (IllegalArgumentException illegalArgumentException) {
@@ -465,12 +490,14 @@ public class Utility {
 
 	private static String getRealPathFromURI(String contentURI, Activity act) {
 		Uri contentUri = Uri.parse(contentURI);
-		Cursor cursor = act.getContentResolver().query(contentUri, null, null, null, null);
+		Cursor cursor = act.getContentResolver().query(contentUri, null, null,
+				null, null);
 		if (cursor == null) {
 			return contentUri.getPath();
 		} else {
 			cursor.moveToFirst();
-			int index = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+			int index = cursor
+					.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
 			return cursor.getString(index);
 		}
 	}
@@ -524,7 +551,8 @@ public class Utility {
 			// of
 			// the original image
 
-			options.inSampleSize = calculateInSampleSize(options, actualWidth, actualHeight);
+			options.inSampleSize = calculateInSampleSize(options, actualWidth,
+					actualHeight);
 
 			// inJustDecodeBounds set to false to load the actual bitmap
 			options.inJustDecodeBounds = false;
@@ -544,7 +572,8 @@ public class Utility {
 
 			}
 			try {
-				scaledBitmap = Bitmap.createBitmap(actualWidth, actualHeight, Bitmap.Config.ARGB_8888);
+				scaledBitmap = Bitmap.createBitmap(actualWidth, actualHeight,
+						Bitmap.Config.ARGB_8888);
 			} catch (OutOfMemoryError exception) {
 				exception.printStackTrace();
 			}
@@ -559,14 +588,17 @@ public class Utility {
 
 			Canvas canvas = new Canvas(scaledBitmap);
 			canvas.setMatrix(scaleMatrix);
-			canvas.drawBitmap(bmp, middleX - bmp.getWidth() / 2, middleY - bmp.getHeight() / 2, new Paint(Paint.FILTER_BITMAP_FLAG));
+			canvas.drawBitmap(bmp, middleX - bmp.getWidth() / 2,
+					middleY - bmp.getHeight() / 2, new Paint(
+							Paint.FILTER_BITMAP_FLAG));
 
 			// check the rotation of the image and display it properly
 			ExifInterface exif;
 			try {
 				exif = new ExifInterface(filePath);
 
-				int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 0);
+				int orientation = exif.getAttributeInt(
+						ExifInterface.TAG_ORIENTATION, 0);
 				Log.d("EXIF", "Exif: " + orientation);
 				Matrix matrix = new Matrix();
 				if (orientation == 6) {
@@ -579,7 +611,9 @@ public class Utility {
 					matrix.postRotate(270);
 					Log.d("EXIF", "Exif: " + orientation);
 				}
-				scaledBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0, scaledBitmap.getWidth(), scaledBitmap.getHeight(), matrix, true);
+				scaledBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0,
+						scaledBitmap.getWidth(), scaledBitmap.getHeight(),
+						matrix, true);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -607,16 +641,19 @@ public class Utility {
 	}
 
 	public static String getFilename() {
-		File file = new File(Environment.getExternalStorageDirectory().getPath(), "MyFolder/Images");
+		File file = new File(Environment.getExternalStorageDirectory()
+				.getPath(), "MyFolder/Images");
 		if (!file.exists()) {
 			file.mkdirs();
 		}
-		String uriSting = (file.getAbsolutePath() + "/" + System.currentTimeMillis() + ".jpg");
+		String uriSting = (file.getAbsolutePath() + "/"
+				+ System.currentTimeMillis() + ".jpg");
 		return uriSting;
 
 	}
 
-	public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+	public static int calculateInSampleSize(BitmapFactory.Options options,
+			int reqWidth, int reqHeight) {
 		// Raw height and width of image
 		final int height = options.outHeight;
 		final int width = options.outWidth;
@@ -630,7 +667,8 @@ public class Utility {
 			// Calculate the largest inSampleSize value that is a power of 2 and
 			// keeps both
 			// height and width larger than the requested height and width.
-			while ((halfHeight / inSampleSize) > reqHeight && (halfWidth / inSampleSize) > reqWidth) {
+			while ((halfHeight / inSampleSize) > reqHeight
+					&& (halfWidth / inSampleSize) > reqWidth) {
 				inSampleSize *= 2;
 			}
 		}
@@ -640,13 +678,15 @@ public class Utility {
 
 	public String getRealPathFromURI(Uri contentURI, Context con) {
 		String result;
-		Cursor cursor = con.getContentResolver().query(contentURI, null, null, null, null);
+		Cursor cursor = con.getContentResolver().query(contentURI, null, null,
+				null, null);
 		if (cursor == null) { // Source is Dropbox or other similar local file
 								// path
 			result = contentURI.getPath();
 		} else {
 			cursor.moveToFirst();
-			int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+			int idx = cursor
+					.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
 			result = cursor.getString(idx);
 			cursor.close();
 		}
@@ -698,7 +738,8 @@ public class Utility {
 			default:
 				return bitmap;
 			}
-			Bitmap bmRotated = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+			Bitmap bmRotated = Bitmap.createBitmap(bitmap, 0, 0,
+					bitmap.getWidth(), bitmap.getHeight(), matrix, true);
 			bitmap.recycle();
 			return bmRotated;
 		} catch (OutOfMemoryError e) {
@@ -710,10 +751,12 @@ public class Utility {
 		}
 	}
 
-	public static boolean isNotEmptyDrop(FragmentActivity activity, EditText gNameView, String groupNameBlank) {
+	public static boolean isNotEmptyDrop(FragmentActivity activity,
+			EditText gNameView, String groupNameBlank) {
 		if (gNameView == null)
 			return false;
-		boolean isEmpty = gNameView.getText().toString().trim().length() > 0 ? true : false;
+		boolean isEmpty = gNameView.getText().toString().trim().length() > 0 ? true
+				: false;
 		if (!isEmpty) {
 			Log.d(TAG, "error is " + groupNameBlank);
 			gNameView.setError(groupNameBlank);
@@ -767,7 +810,8 @@ public class Utility {
 
 	public static void getAppKeyHash(Activity activity) {
 		try {
-			PackageInfo info = activity.getPackageManager().getPackageInfo(activity.getPackageName(), PackageManager.GET_SIGNATURES);
+			PackageInfo info = activity.getPackageManager().getPackageInfo(
+					activity.getPackageName(), PackageManager.GET_SIGNATURES);
 			for (Signature signature : info.signatures) {
 				MessageDigest md;
 
@@ -804,11 +848,10 @@ public class Utility {
 		return true;
 	}
 
-	
-
 	public static int dpToPixel(Activity activity, int dp) {
 		Resources resources = activity.getResources();
-		float applyDimension = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.getDisplayMetrics());
+		float applyDimension = TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP, dp, resources.getDisplayMetrics());
 		return (int) applyDimension;
 	}
 
@@ -819,11 +862,11 @@ public class Utility {
 	 */
 	public static int dpToPixel(Activity activity, float dimension) {
 		Resources resources = activity.getResources();
-		float applyDimension = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dimension, resources.getDisplayMetrics());
+		float applyDimension = TypedValue.applyDimension(
+				TypedValue.COMPLEX_UNIT_DIP, dimension,
+				resources.getDisplayMetrics());
 		return (int) applyDimension;
 	}
-
-	
 
 	public static String getCountryCode(String item) {
 
@@ -844,7 +887,8 @@ public class Utility {
 
 	}
 
-	public static Intent getEmailIntent(Activity activity, String subject, String body) {
+	public static Intent getEmailIntent(Activity activity, String subject,
+			String body) {
 		Intent email = new Intent(Intent.ACTION_SEND);
 		email.putExtra(Intent.EXTRA_SUBJECT, subject);
 		email.putExtra(Intent.EXTRA_TEXT, body);
@@ -852,7 +896,8 @@ public class Utility {
 		return email;
 	}
 
-	public static Intent getMessageIntent(Activity activity, String message, String phoneNumber) {
+	public static Intent getMessageIntent(Activity activity, String message,
+			String phoneNumber) {
 
 		/*
 		 * Intent msgIntent = new Intent(Intent.ACTION_VIEW); Log.d(TAG,
@@ -900,7 +945,8 @@ public class Utility {
 	}
 
 	public static boolean isOnline(Activity activity) {
-		ConnectivityManager cm = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+		ConnectivityManager cm = (ConnectivityManager) activity
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo netInfo = cm.getActiveNetworkInfo();
 		if (netInfo != null && netInfo.isConnectedOrConnecting()) {
 			return true;
@@ -926,5 +972,12 @@ public class Utility {
 		res.updateConfiguration(conf, dm);
 	}
 
+	public static TypedInput getTypedInputJson(String json) {
+		TypedInput typedInput = new TypedByteArray(MIME_TYPE, json.getBytes());
+		return typedInput;
+	}
 	
+	
+	
+
 }

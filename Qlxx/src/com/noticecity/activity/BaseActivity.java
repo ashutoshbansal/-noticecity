@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View.OnClickListener;
 
 import com.noticecity.application.MyApplication;
-import com.noticecity.retrofitcore.MyNetworkCallBack;
+import com.noticecity.network.MyRetroftCallBack;
 
-public abstract class BaseActivity<T> extends Activity implements MyNetworkCallBack<T> {
+public abstract class BaseActivity<T> extends Activity implements MyRetroftCallBack {
 	private final static int CONNECTION_FAILURE_RESOLUTION_REQUEST = 9000;
 	private static final String TAG = BaseActivity.class.getSimpleName();
 	protected MyApplication application;

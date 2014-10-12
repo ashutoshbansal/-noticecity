@@ -140,25 +140,24 @@ public class LoginActivity extends BaseActivity implements OnClickListener, Soft
 
 	}
 
+
+
+	@Override
+	public <T> void onSuccess(T t, SERVICE_MODE screenMode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void onFailure(RetrofitError retrofitError, SERVICE_MODE screenMode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
 	
-	/* (non-Javadoc)
-	 * @see com.noticecity.retrofitcore.MyNetworkCallBack#onSuccess(android.app.Dialog, java.lang.Object, retrofit.client.Response, com.noticecity.utils.Constants.SERVICE_MODE)
-	 */
-	@Override
-	public void onSuccess(Dialog progressDialog, Object t, Response arg1, SERVICE_MODE serviceMode)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	/* (non-Javadoc)
-	 * @see com.noticecity.retrofitcore.MyNetworkCallBack#onFailure(android.app.Dialog, java.lang.Object, retrofit.RetrofitError, com.noticecity.utils.Constants.SERVICE_MODE)
-	 */
-	@Override
-	public void onFailure(Dialog progressDialog, Object t, RetrofitError arg1, SERVICE_MODE serviceMode)
-	{
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }

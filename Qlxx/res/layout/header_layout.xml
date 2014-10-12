@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.noticecity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_very_small" >
+
+    <com.noticecity.widgets.CustomTextView
+        android:id="@+id/side_navigation_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        HelveticaNeueLTPro-Bd.otf=""
+        android:text="N"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_small_x_3"
+        app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+    <com.noticecity.widgets.CustomTextView
+        android:id="@+id/title_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        HelveticaNeueLTPro-Bd.otf=""
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_small_x_3"
+        app:ttf_name="HelveticaNeueLTPro-Lt.otf" />
+
+</RelativeLayout>

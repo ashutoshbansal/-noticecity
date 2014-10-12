@@ -2,18 +2,23 @@ package com.noticecity.utils;
 
 public interface Constants {
 
-	enum SCREEN_MODE{
-		
+	public enum SCREEN_MODE {
+		MENU_OPTION_1, MENU_OPTION_2, MENU_OPTION_3
 	};
-	
-enum SERVICE_MODE{
-		
+
+	public enum SIDE_MENU_MODE {
+		HOME, MESSAGE, PROFILE, LOGOUT
 	};
-	
-	
+
+	public enum SERVICE_MODE {
+		CREATE_ACCOUNT
+	};
+
 	interface Services {
 
-		String BASE_URL = "";
+		String BASE_URL = "http://qnectar.net";
+		String CREATE_USER = "/createuser";
+		String LOGIN_USER = "/login";
 	}
 
 	interface ToastMesaage {
@@ -59,6 +64,8 @@ enum SERVICE_MODE{
 		String SHOP_SEARCH_ENGINE_NOT_FOUND = "Shop search engine not found";
 		String INVALID_INVITE_CODE = "Invalid invite code";
 		String SEARCH_FLIGHTS = "searching flight....";
+		String BUISNESS_TYPE_BLANK = "Please select type";
+		String MODE_BLANK = "Please select profile mode";
 
 		interface ErrorCodeMessage {
 			String MISSING_PARAMETER = "Please send proper parameter in order to process request";
@@ -67,36 +74,20 @@ enum SERVICE_MODE{
 		}
 
 	}
-	
+
 	interface NoticeCityPreference {
 		String PREFERENCE_NAME = "notice_city_pref";
-		String PREFERENCE_SELECT_LANG = "language";
-		String PREFERENCE_USERNAME = "s_username";
-		String PREFERENCE_PASSWORD = "s_password";
-		String PREFERENCE_REMEMBER_ME = "s_remember_me";
-		String PREFERENCE_REMEMBER_USERNAME = "s_rem_username";
-		String PREFERENCE_REMEMBER_PASSWORD = "s_rem_password";
-		String PREFERENCE_ID_AFFIALIATE = "s_id_aff";
-		String PREFERENCE_ID_SPONSOR = "s_sponsor";
-		String PREFERENCE_AUTO_USERNAME = "s_auto_user";
-		String PREFERENCE_FIRST_NAME = "s_f_name";
-		String PREFERENCE_LAST_NAME = "s_l_name";
-		String PREFERENCE_COUNTRY = "s_country";
-		String PREFERENCE_USER_SOCIAL_ID = "s_social_id";
-		String PREFERENCE_USER_IMAGE = "s_uimage";
-		String PREFERENCE_COUPONS = "s_coupons";
-		String PREFERENCE_CODE = "s_code";
-		String PREFERENCE_COUNTRY_CODE = "s_country_code";
-		String PREFERENCE_ID_BRANDING = "s_id_brand";
-		String PREFERENCE_WEBSITE = "s_website";
-		String PREFERENCE_ID_COUPONS = "s_id_coupons";
-		String PREFERENCE_TITLE = "s_title";
-		String PREFERENCE_SUB_TITLE = "s_sub_title";
-		String PREFERENCE_DETAIL = "s_detail";
-		String PREFERENCE_OFFERS = "s_offers";
-		String PREFERENCE_SPECIAL_HERE = "s_special_here";
-		String PREFERENCE_MY_ID = "s_my_id";
-		String PREFERENCE_COUPONS_IMAGE = "s_coupon_img";
+		String PREFERENCE_USERNAME = "n_username";
+		String PREFERENCE_PASSWORD = "n_password";
+		String PREFERENCE_REMEMBER_ME = "n_remember_me";
+		String PREFERENCE_CITY = "n_city";
+		String PREFERENCE_USER_IMAGE = "n_uimage";
+		String PREFERENCE_PHONE_NUMBER = "n_phone_number";
+		String PREFERENCE_EMAIL = "n_email";
+		String PREFERENCE_PROFILE_TYPE = "n_profile_type";
+		String PREFERENCE_MODE_TYPE = "n_mode_type";
+		String PREFERENCE_REMEMBER_USERNAME = "n_rem_user";
+		String PREFERENCE_REMEMBER_PASSWORD = "n_rem_pass";
 	}
 
 	interface RequestCode {
@@ -104,5 +95,4 @@ enum SERVICE_MODE{
 		int SCAN_ACITIVITY = 214;
 	}
 
-	
 }

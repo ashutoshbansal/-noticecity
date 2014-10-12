@@ -1,14 +1,12 @@
 package com.noticecity.application;
 
 import retrofit.RequestInterceptor;
-import retrofit.RequestInterceptor.RequestFacade;
 import retrofit.RestAdapter;
-
-import com.noticecity.retrofitcore.RestService;
-import com.noticecity.utils.Constants;
-
 import android.app.Application;
 import android.content.SharedPreferences;
+
+import com.noticecity.network.RestService;
+import com.noticecity.utils.Constants;
 
 public class MyApplication extends Application {
 	private RestService restService;
@@ -46,7 +44,9 @@ public class MyApplication extends Application {
 
 	public SharedPreferences getPreference() {
 		if (mSharedPreferences == null) {
-			mSharedPreferences = getSharedPreferences(Constants.NoticeCityPreference.PREFERENCE_NAME, MODE_PRIVATE);
+			mSharedPreferences = getSharedPreferences(
+					Constants.NoticeCityPreference.PREFERENCE_NAME,
+					MODE_PRIVATE);
 		}
 		return mSharedPreferences;
 	}

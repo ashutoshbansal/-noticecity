@@ -6,8 +6,10 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
+import com.noticecity.activity.CreateAccountActivity;
 import com.noticecity.exception.MyException;
 import com.noticecity.utils.Constants.SCREEN_MODE;
+import com.noticecity.utils.Constants.SERVICE_MODE;
 import com.noticecity.widgets.ProgressHUD;
 
 ;
@@ -16,10 +18,10 @@ public class MyNetwork<T> implements Callback<T> {
 	private Dialog mDialog;
 	private MyRetroftCallBack myRetroftCallBack;
 	private Activity activity;
-	private SCREEN_MODE screenMode;
+	private SERVICE_MODE screenMode;
 
 	public MyNetwork(Boolean isDialog, MyRetroftCallBack myRetroftCallBack,
-			Activity activity, SCREEN_MODE screenMode, String loadingMessage) {
+			Activity activity, SERVICE_MODE screenMode, String loadingMessage) {
 		this.myRetroftCallBack = myRetroftCallBack;
 		this.activity = activity;
 		this.screenMode = screenMode;
@@ -29,10 +31,12 @@ public class MyNetwork<T> implements Callback<T> {
 	}
 
 	public MyNetwork(Boolean isDialog, MyRetroftCallBack myRetroftCallBack,
-			Activity activity, SCREEN_MODE screenMode) {
-		this(isDialog, myRetroftCallBack, activity, screenMode, "Loading..");
+			Activity activity, SERVICE_MODE createAccount) {
+		this(isDialog, myRetroftCallBack, activity, createAccount, "Loading..");
 
 	}
+
+	
 
 	@Override
 	public void failure(RetrofitError arg0) {
