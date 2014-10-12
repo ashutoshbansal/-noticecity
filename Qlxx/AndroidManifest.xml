@@ -6,15 +6,17 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name="com.noticecity.application.MyApplication"
+         >
         <activity
-            android:name="com.noticecity.LoginActivity"
+            android:name="com.noticecity.activity.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.noticecity.activity.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.noticecity.activity.CreateAccountActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
